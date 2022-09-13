@@ -19,6 +19,7 @@ vim.g.maplocalleader = " "
 keymap("n", "<leader>e", ":NvimTreeFindFileToggle<CR>", opts)
 keymap("n", "<leader>q", ":q<CR>", opts)
 keymap("n", "<leader>s", ":w<CR>", opts)
+keymap("n", "<leader><leader>q", ":bd<CR>", opts)
 
 -- Windows
 keymap("n", "<leader>wh", "<C-w>h", opts)
@@ -35,6 +36,7 @@ keymap("n", "<C-h>", ":vertical resize +2<CR>", opts)
 -- Buffer nav
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
+keymap("n", "<leader>jj", "<C-^>", opts)
 
 -- Crazy Esc
 keymap("i", "jk", "<ESC>", opts)
@@ -57,12 +59,7 @@ keymap("x", "<A-j>", ":m '>+1<CR>gv=gv", opts)
 keymap("x", "<A-k>", ":m '<-2<CR>gv=gv", opts)
 
 -- Smart pasting
--- keymap("v", "p", '"_dp', opts)
-
-keymap("n", "<leader>f", "<Cmd>Telescope find_files<CR>", opts)
-keymap("n", "<leader>r", "<Cmd>Telescope live_grep<CR>", opts)
-keymap("n", "<leader>b", "<Cmd>Telescope buffers<CR>", opts)
-keymap("n", "<leader>j", "<Cmd>Telescope current_buffer_fuzzy_find<CR>", opts)
+keymap("v", "p", '"_dp', opts)
 
 -- Quick source with uncaching modules
 function _G.ReloadConfig()
