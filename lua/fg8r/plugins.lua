@@ -58,6 +58,7 @@ return packer.startup(function(use)
   use "NLKNguyen/papercolor-theme"
   use "sainnhe/gruvbox-material"
   use { "catppuccin/nvim", as = "catppuccin" }
+  use "lifepillar/vim-gruvbox8"
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- the completion plugin

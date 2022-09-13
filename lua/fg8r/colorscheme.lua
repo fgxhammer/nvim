@@ -1,7 +1,8 @@
 -- local colorscheme = "catppuccin"
-local colorscheme = "gruvbox"
+local colorscheme = "gruvbox8"
 
 if colorscheme == "catppuccin" then
+  vim.g.catppuccin_flavour = "macchiato" -- latte, frappe, macchiato, mocha
   require("catppuccin").setup({
     transparent_background = true,
     term_colors = false,

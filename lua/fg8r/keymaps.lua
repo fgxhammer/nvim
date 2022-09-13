@@ -38,6 +38,8 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
 -- Crazy Esc
 keymap("i", "jk", "<ESC>", opts)
+keymap("i", "kj", "<ESC>", opts)
+keymap("i", "jj", "<ESC>", opts)
 
 -- No hls
 keymap("n", "<leader>nh", ":nohls<CR>", opts)

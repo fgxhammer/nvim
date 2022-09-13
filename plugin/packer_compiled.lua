@@ -219,6 +219,11 @@ _G.packer_plugins = {
     path = "/Users/fg/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["vim-gruvbox8"] = {
+    loaded = true,
+    path = "/Users/fg/.local/share/nvim/site/pack/packer/start/vim-gruvbox8",
+    url = "https://github.com/lifepillar/vim-gruvbox8"
+  },
   ["vim-surround"] = {
     loaded = true,
     path = "/Users/fg/.local/share/nvim/site/pack/packer/start/vim-surround",
