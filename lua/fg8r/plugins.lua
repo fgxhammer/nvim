@@ -52,6 +52,7 @@ return packer.startup(function(use)
   use "nvim-telescope/telescope-media-files.nvim"
   use "nvim-lualine/lualine.nvim"
   use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
+  use "EdenEast/nightfox.nvim"
 
   -- colorschemes
   use "morhetz/gruvbox"
