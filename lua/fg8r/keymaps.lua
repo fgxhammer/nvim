@@ -40,7 +40,6 @@ keymap("n", "<leader>jj", "<C-^>", opts)
 
 -- Crazy Esc
 keymap("i", "jk", "<ESC>", opts)
-keymap("i", "kj", "<ESC>", opts)
 keymap("i", "jj", "<ESC>", opts)
 
 -- No hls
