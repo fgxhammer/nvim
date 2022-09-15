@@ -52,14 +52,6 @@ return packer.startup(function(use)
   use "nvim-telescope/telescope-media-files.nvim"
   use "nvim-lualine/lualine.nvim"
   use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
-  use "EdenEast/nightfox.nvim"
-
-  -- colorschemes
-  use "morhetz/gruvbox"
-  use "NLKNguyen/papercolor-theme"
-  use "sainnhe/gruvbox-material"
-  use { "catppuccin/nvim", as = "catppuccin" }
-  use "lifepillar/vim-gruvbox8"
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- the completion plugin
@@ -84,6 +76,22 @@ return packer.startup(function(use)
 
   -- Git
   use "lewis6991/gitsigns.nvim"
+
+  -- colorschemes
+  use "morhetz/gruvbox"
+  use "NLKNguyen/papercolor-theme"
+  use "sainnhe/gruvbox-material"
+  use { "catppuccin/nvim", as = "catppuccin" }
+  use "drewtempelmeyer/palenight.vim"
+  use "ayu-theme/ayu-vim"
+  use "rakr/vim-one"
+  use "Everblush/everblush.vim"
+  use "sainnhe/everforest"
+  use "bluz71/vim-nightfly-guicolors"
+  use "sainnhe/sonokai"
+  use "joshdick/onedark.vim"
+  use "dracula/vim"
+  use "EdenEast/nightfox.nvim"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

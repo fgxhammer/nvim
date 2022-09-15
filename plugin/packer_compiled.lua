@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "/Users/fg/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["ayu-vim"] = {
+    loaded = true,
+    path = "/Users/fg/.local/share/nvim/site/pack/packer/start/ayu-vim",
+    url = "https://github.com/ayu-theme/ayu-vim"
+  },
   ["bufferline.nvim"] = {
     loaded = true,
     path = "/Users/fg/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
@@ -123,6 +128,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/fg/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
+  },
+  ["everblush.vim"] = {
+    loaded = true,
+    path = "/Users/fg/.local/share/nvim/site/pack/packer/start/everblush.vim",
+    url = "https://github.com/Everblush/everblush.vim"
+  },
+  everforest = {
+    loaded = true,
+    path = "/Users/fg/.local/share/nvim/site/pack/packer/start/everforest",
+    url = "https://github.com/sainnhe/everforest"
   },
   ["friendly-snippets"] = {
     loaded = true,
@@ -194,10 +209,20 @@ _G.packer_plugins = {
     path = "/Users/fg/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
+  ["onedark.vim"] = {
+    loaded = true,
+    path = "/Users/fg/.local/share/nvim/site/pack/packer/start/onedark.vim",
+    url = "https://github.com/joshdick/onedark.vim"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/Users/fg/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
+  },
+  ["palenight.vim"] = {
+    loaded = true,
+    path = "/Users/fg/.local/share/nvim/site/pack/packer/start/palenight.vim",
+    url = "https://github.com/drewtempelmeyer/palenight.vim"
   },
   ["papercolor-theme"] = {
     loaded = true,
@@ -214,6 +239,11 @@ _G.packer_plugins = {
     path = "/Users/fg/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
   },
+  sonokai = {
+    loaded = true,
+    path = "/Users/fg/.local/share/nvim/site/pack/packer/start/sonokai",
+    url = "https://github.com/sainnhe/sonokai"
+  },
   ["telescope-media-files.nvim"] = {
     loaded = true,
     path = "/Users/fg/.local/share/nvim/site/pack/packer/start/telescope-media-files.nvim",
@@ -224,10 +254,20 @@ _G.packer_plugins = {
     path = "/Users/fg/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
-  ["vim-gruvbox8"] = {
+  vim = {
     loaded = true,
-    path = "/Users/fg/.local/share/nvim/site/pack/packer/start/vim-gruvbox8",
-    url = "https://github.com/lifepillar/vim-gruvbox8"
+    path = "/Users/fg/.local/share/nvim/site/pack/packer/start/vim",
+    url = "https://github.com/dracula/vim"
+  },
+  ["vim-nightfly-guicolors"] = {
+    loaded = true,
+    path = "/Users/fg/.local/share/nvim/site/pack/packer/start/vim-nightfly-guicolors",
+    url = "https://github.com/bluz71/vim-nightfly-guicolors"
+  },
+  ["vim-one"] = {
+    loaded = true,
+    path = "/Users/fg/.local/share/nvim/site/pack/packer/start/vim-one",
+    url = "https://github.com/rakr/vim-one"
   },
   ["vim-surround"] = {
     loaded = true,
