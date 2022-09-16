@@ -13,6 +13,7 @@ vim.api.nvim_set_keymap("n", "<leader>fg", "<cmd>lua require('telescope.builtin'
 vim.api.nvim_set_keymap("n", "<leader>fb", "<cmd>lua require('telescope.builtin').buffers()<cr>", opts)
 vim.api.nvim_set_keymap("n", "<leader>fh", "<cmd>lua require('telescope.builtin').help_tags()<cr>", opts)
 
+telescope.load_extension('dap')
 telescope.setup({
   defaults = {
 

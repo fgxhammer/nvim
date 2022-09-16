@@ -53,6 +53,12 @@ return packer.startup(function(use)
   use "nvim-lualine/lualine.nvim"
   use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
 
+  -- Debugger
+  use "mfussenegger/nvim-dap"
+  use "theHamsta/nvim-dap-virtual-text"
+  use "rcarriga/nvim-dap-ui"
+  use "nvim-telescope/telescope-dap.nvim"
+
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- the completion plugin
   use "hrsh7th/cmp-buffer" -- buffer competions

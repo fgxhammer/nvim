@@ -16,10 +16,10 @@ vim.g.maplocalleader = " "
 --  term_mode = "t",
 --  command_mode = "c",
 
-keymap("n", "<leader>e", ":NvimTreeFindFileToggle<CR>", opts)
-keymap("n", "<leader>q", ":q<CR>", opts)
-keymap("n", "<leader>s", ":w<CR>", opts)
-keymap("n", "<leader><leader>q", ":bd<CR>", opts)
+keymap("n", "<leader>e", ":NvimTreeFindFileToggle<cr>", opts)
+keymap("n", "<leader>q", ":q<cr>", opts)
+keymap("n", "<leader>s", ":w<cr>", opts)
+keymap("n", "<leader><leader>q", ":bd<cr>", opts)
 
 -- Windows
 keymap("n", "<leader>wh", "<C-w>h", opts)
@@ -28,37 +28,34 @@ keymap("n", "<leader>wk", "<C-w>k", opts)
 keymap("n", "<leader>wl", "<C-w>l", opts)
 
 -- Resize
-keymap("n", "<C-j>", ":resize +2<CR>", opts)
-keymap("n", "<C-k>", ":resize -2<CR>", opts)
-keymap("n", "<C-l>", ":vertical resize -2<CR>", opts)
-keymap("n", "<C-h>", ":vertical resize +2<CR>", opts)
+keymap("n", "<C-j>", ":resize +2<cr>", opts)
+keymap("n", "<C-k>", ":resize -2<cr>", opts)
+keymap("n", "<C-l>", ":vertical resize -2<cr>", opts)
+keymap("n", "<C-h>", ":vertical resize +2<cr>", opts)
 
 -- Buffer nav
-keymap("n", "<S-l>", ":bnext<CR>", opts)
-keymap("n", "<S-h>", ":bprevious<CR>", opts)
+keymap("n", "<S-l>", ":bnext<cr>", opts)
+keymap("n", "<S-h>", ":bprevious<cr>", opts)
 keymap("n", "<leader>jj", "<C-^>", opts)
 
 -- Crazy Esc
-keymap("i", "jk", "<ESC>", opts)
-keymap("i", "jj", "<ESC>", opts)
+keymap("i", "jk", "<esc>", opts)
+keymap("i", "jj", "<esc>", opts)
 
 -- No hls
-keymap("n", "<leader>nh", ":nohls<CR>", opts)
+keymap("n", "<leader>nh", ":nohls<cr>", opts)
 
 -- Insert newline stay in nromal mode
-keymap("n", "<leader>o", "o<Esc>0\"_D", opts)
-keymap("n", "<leader>O", "O<Esc>0\"_D", opts)
+keymap("n", "<leader>o", "o<esc>0\"_D", opts)
+keymap("n", "<leader>O", "O<esc>0\"_D", opts)
 
 -- Stay in indent mode
 keymap("v", "<Tab>", ">gv", opts)
 keymap("v", "<S-Tab>", "<gv", opts)
 
 -- Move text up down
-keymap("x", "<A-j>", ":m '>+1<CR>gv=gv", opts)
-keymap("x", "<A-k>", ":m '<-2<CR>gv=gv", opts)
-
--- Smart pasting
-keymap("v", "p", '"_dp', opts)
+keymap("x", "<A-j>", ":m '>+1<cr>gv=gv", opts)
+keymap("x", "<A-k>", ":m '<-2<cr>gv=gv", opts)
 
 -- Quick source with uncaching modules
 function _G.ReloadConfig()
@@ -71,5 +68,16 @@ function _G.ReloadConfig()
   dofile(vim.env.MYVIMRC)
 end
 
-keymap('n', '<Leader><leader>s', '<Cmd>lua ReloadConfig()<CR>', opts)
+keymap('n', '<Leader><leader>s', '<cmd>lua ReloadConfig()<cr>', opts)
 vim.cmd('command! ReloadConfig lua ReloadConfig()')
+
+-- DAP
+keymap("n", "<leader>db", "<cmd>lua require'dap'.toggle_breakpoint()<cr>", opts)
+keymap("n", "<leader>dc", "<cmd>lua require'dap'.continue()<cr>", opts)
+keymap("n", "<leader>di", "<cmd>lua require'dap'.step_into()<cr>", opts)
+keymap("n", "<leader>do", "<cmd>lua require'dap'.step_over()<cr>", opts)
+keymap("n", "<leader>dO", "<cmd>lua require'dap'.step_out()<cr>", opts)
+keymap("n", "<leader>dr", "<cmd>lua require'dap'.repl.toggle()<cr>", opts)
+keymap("n", "<leader>dl", "<cmd>lua require'dap'.run_last()<cr>", opts)
+keymap("n", "<leader>du", "<cmd>lua require'dapui'.toggle()<cr>", opts)
+keymap("n", "<leader>dt", "<cmd>lua require'dap'.terminate()<cr>", opts)
