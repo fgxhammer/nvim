@@ -1,12 +1,12 @@
 -- https://github.com/mfussenegger/nvim-dap/wiki/Debug-Adapter-installation#Javascript
 local dap_status_ok, dap = pcall(require, "dap")
 if not dap_status_ok then
-	return
+  return
 end
 
-local dap_ui_status_ok, dapui = pcall(require, "dapui")
+local dap_ui_status_ok, dap_ui = pcall(require, "dapui")
 if not dap_ui_status_ok then
-	return
+  return
 end
 
 local dap_vt_status_ok, dap_vt = pcall(require, "nvim-dap-virtual-text")
@@ -14,11 +14,13 @@ if not dap_vt_status_ok then
   return
 end
 
+local home = os.getenv('HOME')
+
 -- Nodejs debug adapter
 dap.adapters.node2 = {
   type = 'executable',
   command = 'node',
-  args = {os.getenv('HOME') .. '/dev/microsoft/vscode-node-debug2/out/src/nodeDebug.js'},
+  args = { home .. '/dev/microsoft/vscode-node-debug2/out/src/nodeDebug.js' },
 }
 
 dap.configurations.javascript = {
@@ -33,33 +35,42 @@ dap.configurations.javascript = {
     console = 'integratedTerminal',
   },
   {
-    -- For this to work you need to make sure the node process is started with the `--inspect` flag.
+    -- For this to work you need to make sure the node process
+    -- is started with the `--inspect` flag.
     name = 'Attach to process',
     type = 'node2',
     request = 'attach',
-    processId = require'dap.utils'.pick_process,
+    processId = require('dap.utils').pick_process,
   },
 }
 
--- Go debug adapter
-dap.adapters.go = {
-  type = 'executable';
-  command = 'node';
-  args = {os.getenv('HOME') .. '/dev/golang/vscode-go/dist/debugAdapter.js'};
-}
+-- dap.configurations.typescript = {
+--     {
+--         name = "ts-node (Node2 with ts-node)",
+--         type = "node2",
+--         request = "launch",
+--         cwd = vim.loop.cwd(),
+--         runtimeArgs = { "-r", "ts-node/register" },
+--         runtimeExecutable = "node",
+--         args = {"--inspect", "${file}"},
+--         sourceMaps = true,
+--         skipFiles = { "<node_internals>/**", "node_modules/**" },
+--     },
+--     {
+--         name = "Jest (Node2 with ts-node)",
+--         type = "node2",
+--         request = "launch",
+--         cwd = vim.loop.cwd(),
+--         runtimeArgs = {"--inspect-brk", "${workspaceFolder}/node_modules/.bin/jest"},
+--         runtimeExecutable = "node",
+--         args = {"${file}", "--runInBand", "--coverage", "false"},
+--         sourceMaps = true,
+--         port = 9229,
+--         skipFiles = { "<node_internals>/**", "node_modules/**" },
+--     },
+-- }
 
-dap.configurations.go = {
-  {
-    type = 'go';
-    name = 'Debug';
-    request = 'launch';
-    showLog = false;
-    program = "${file}";
-    dlvToolPath = vim.fn.exepath('dlv')  -- Adjust to where delve is installed
-  },
-}
-
-dapui.setup({
+dap_ui.setup({
   icons = { expanded = "▾", collapsed = "▸", current_frame = "▸" },
   mappings = {
     -- Use a table to apply multiple mappings
@@ -118,13 +129,13 @@ dapui.setup({
 
 -- Open / close dapui
 dap.listeners.after.event_initialized["dapui_config"] = function()
-  dapui.open()
+  dap_ui.open()
 end
 dap.listeners.before.event_terminated["dapui_config"] = function()
-  dapui.close()
+  dap_ui.close()
 end
 dap.listeners.before.event_exited["dapui_config"] = function()
-  dapui.close()
+  dap_ui.close()
 end
 
 dap_vt.setup({
