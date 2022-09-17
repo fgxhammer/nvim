@@ -16,7 +16,7 @@ if colorscheme == "catppuccin" then
     },
     styles = {
       comments = { "italic" },
-      conditionals = { "italic" },
+      conditionals = { "bold" },
       loops = {},
       functions = { "bold" },
       keywords = {},
@@ -25,7 +25,7 @@ if colorscheme == "catppuccin" then
       numbers = {},
       booleans = {},
       properties = {},
-      types = {},
+      types = { "bold" },
       operators = {},
     },
     integrations = {

@@ -1,6 +1,7 @@
 local M = {}
 
 M.setup = function()
+  -- TODO find better icons
   local signs = {
     { name = "DiagnosticSignError", text = "x" },
     { name = "DiagnosticSignWarn", text = "!" },
