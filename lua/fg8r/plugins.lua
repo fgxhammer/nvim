@@ -96,8 +96,8 @@ return packer.startup(function(use)
   use "bluz71/vim-nightfly-guicolors"
   use "sainnhe/sonokai"
   use "joshdick/onedark.vim"
-  use "dracula/vim"
   use "EdenEast/nightfox.nvim"
+  use 'Mofiqul/dracula.nvim'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

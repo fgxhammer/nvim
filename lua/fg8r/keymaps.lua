@@ -16,9 +16,9 @@ vim.g.maplocalleader = " "
 --  command_mode = "c",
 
 keymap("n", "<leader>e", ":NvimTreeFindFileToggle<cr>", opts)
-keymap("n", "<leader>q", ":q<cr>", opts)
+keymap("n", "<leader><leader>q", ":q<cr>", opts)
 keymap("n", "<leader>s", ":w<cr>", opts)
-keymap("n", "<leader><leader>q", ":bd<cr>", opts)
+keymap("n", "<leader>q", ":bd<cr>", opts)
 
 -- Windows
 keymap("n", "<leader>wh", "<C-w>h", opts)

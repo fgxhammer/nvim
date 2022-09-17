@@ -129,6 +129,11 @@ _G.packer_plugins = {
     path = "/Users/fg/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["dracula.nvim"] = {
+    loaded = true,
+    path = "/Users/fg/.local/share/nvim/site/pack/packer/start/dracula.nvim",
+    url = "https://github.com/Mofiqul/dracula.nvim"
+  },
   ["everblush.vim"] = {
     loaded = true,
     path = "/Users/fg/.local/share/nvim/site/pack/packer/start/everblush.vim",
@@ -273,11 +278,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/fg/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
-  },
-  vim = {
-    loaded = true,
-    path = "/Users/fg/.local/share/nvim/site/pack/packer/start/vim",
-    url = "https://github.com/dracula/vim"
   },
   ["vim-nightfly-guicolors"] = {
     loaded = true,
