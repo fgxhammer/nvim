@@ -57,18 +57,18 @@ keymap("x", "<A-j>", ":m '>+1<cr>gv=gv", opts)
 keymap("x", "<A-k>", ":m '<-2<cr>gv=gv", opts)
 
 -- Quick source with uncaching modules
-function _G.ReloadConfig()
-  for name,_ in pairs(package.loaded) do
-    if name:match('^fg8r') then
-      package.loaded[name] = nil
-    end
-  end
-  -- Set $MYVIMRC
-  dofile(vim.env.MYVIMRC)
-end
-
-keymap('n', '<Leader><leader>s', '<cmd>lua ReloadConfig()<cr>', opts)
-vim.cmd('command! ReloadConfig lua ReloadConfig()')
+-- function _G.ReloadConfig()
+--   for name,_ in pairs(package.loaded) do
+--     if name:match('^fg8r') then
+--       package.loaded[name] = nil
+--     end
+--   end
+--   -- Set $MYVIMRC
+--   dofile(vim.env.MYVIMRC)
+-- end
+--
+-- keymap('n', '<Leader><leader>s', '<cmd>lua ReloadConfig()<cr>', opts)
+-- vim.cmd('command! ReloadConfig lua ReloadConfig()')
 
 -- Telescope
 keymap("n", "<leader>ff", "<cmd>lua require('telescope.builtin').find_files()<cr>", opts)

@@ -51,7 +51,7 @@ return packer.startup(function(use)
   use "nvim-telescope/telescope.nvim"
   use "nvim-telescope/telescope-media-files.nvim"
   use "nvim-lualine/lualine.nvim"
-  use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
+  use { 'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons' }
 
   -- Debugger
   use "mfussenegger/nvim-dap"
@@ -75,8 +75,9 @@ return packer.startup(function(use)
   -- LSP
   use "neovim/nvim-lspconfig" -- neovim LSP
   use "williamboman/nvim-lsp-installer" -- LSP installer
-  -- Treesitter
+  use "jose-elias-alvarez/null-ls.nvim"
 
+  -- Treesitter
   use "nvim-treesitter/nvim-treesitter"
   use "p00f/nvim-ts-rainbow"
 
