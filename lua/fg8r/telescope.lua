@@ -5,17 +5,28 @@ end
 
 telescope.load_extension('dap')
 
+local actions = require("telescope.actions")
+
 telescope.setup({
   defaults = {
 
-    -- mappings = {},
+    mappings = {
+      i = {
+        ["<leader>q"] = actions.send_selected_to_qflist + actions.open_qflist,
+        ["<leader>Q"] = actions.send_to_qflist + actions.open_qflist
+      },
+      n = {
+        ["<leader>q"] = actions.send_selected_to_qflist + actions.open_qflist,
+        ["<leader>Q"] = actions.send_to_qflist + actions.open_qflist
+      }
+    },
     -- prompt_prefix = "",
     -- selection_caret = "",
     -- path_display = { "smart" },
 
   },
   pickers = {
-   find_files = {
+    find_files = {
       theme = "dropdown"
     },
     grep_string = {
