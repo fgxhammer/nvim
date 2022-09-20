@@ -44,8 +44,8 @@ keymap("i", "jj", "<esc>", opts)
 keymap("n", "<leader>nh", ":nohls<cr>", opts)
 
 -- Insert newline stay in nromal mode
-keymap("n", "<leader>o", "o<esc>0\"_D", opts)
-keymap("n", "<leader>O", "O<esc>0\"_D", opts)
+keymap("n", "<leader>o", 'o<esc>0"_D', opts)
+keymap("n", "<leader>O", 'O<esc>0"_D', opts)
 
 -- Stay in indent mode
 keymap("v", "<Tab>", ">gv", opts)
@@ -58,16 +58,16 @@ keymap("x", "<A-k>", ":m '<-2<cr>gv=gv", opts)
 -- FIXME Rewrite to mach fgxhammer user
 -- Quick source with uncaching modules
 function _G.ReloadConfig()
-  for name, _ in pairs(package.loaded) do
-    if name:match('^fg8r') then
-      package.loaded[name] = nil
-    end
-  end
-  -- Set $MYVIMRC
-  dofile(vim.env.MYVIMRC)
+	for name, _ in pairs(package.loaded) do
+		if name:match("^fg8r") then
+			package.loaded[name] = nil
+		end
+	end
+	-- Set $MYVIMRC
+	dofile(vim.env.MYVIMRC)
 end
 
-keymap('n', '<Leader><leader>.', '<cmd>lua ReloadConfig()<cr>', opts)
+keymap("n", "<Leader><leader>,", "<cmd>lua ReloadConfig()<cr>", opts)
 -- vim.cmd('command! ReloadConfig lua ReloadConfig()')
 
 -- Telescope

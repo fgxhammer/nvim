@@ -45,6 +45,7 @@ null_ls.setup({
 		-- formatting
 		formatting.eslint_d,
 		formatting.stylua,
+		formatting.gofmt,
 	},
 	on_attach = function(client, bufnr)
 		if client.supports_method("textDocument/formatting") then
