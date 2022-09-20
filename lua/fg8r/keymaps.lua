@@ -19,11 +19,11 @@ keymap("n", "<leader>q", ":q<cr>", opts)
 keymap("n", "<leader>w", ":w<cr>", opts)
 keymap("n", "<leader><leader>q", ":bd<cr>", opts)
 
--- Windows
-keymap("n", "<leader>h", "<C-w>h", opts)
-keymap("n", "<leader>j", "<C-w>j", opts)
-keymap("n", "<leader>k", "<C-w>k", opts)
-keymap("n", "<leader>l", "<C-w>l", opts)
+-- Window navigation
+keymap("n", "<leader><leader>h", "<C-w>h", opts)
+keymap("n", "<leader><leader>j", "<C-w>j", opts)
+keymap("n", "<leader><leader>k", "<C-w>k", opts)
+keymap("n", "<leader><leader>l", "<C-w>l", opts)
 
 -- Resize
 keymap("n", "<C-j>", ":resize +2<cr>", opts)
