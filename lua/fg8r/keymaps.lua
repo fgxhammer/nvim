@@ -20,10 +20,10 @@ keymap("n", "<leader>w", ":w<cr>", opts)
 keymap("n", "<leader><leader>q", ":bd<cr>", opts)
 
 -- Window navigation
-keymap("n", "<leader><leader>h", "<C-w>h", opts)
-keymap("n", "<leader><leader>j", "<C-w>j", opts)
-keymap("n", "<leader><leader>k", "<C-w>k", opts)
-keymap("n", "<leader><leader>l", "<C-w>l", opts)
+keymap("n", "<leader>hh", "<C-w>h", opts)
+keymap("n", "<leader>jj", "<C-w>j", opts)
+keymap("n", "<leader>kk", "<C-w>k", opts)
+keymap("n", "<leader>ll", "<C-w>l", opts)
 
 -- Resize
 keymap("n", "<C-j>", ":resize +2<cr>", opts)
