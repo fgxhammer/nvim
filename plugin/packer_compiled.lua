@@ -274,11 +274,6 @@ _G.packer_plugins = {
     path = "/Users/fg/.local/share/nvim/site/pack/packer/start/telescope-dap.nvim",
     url = "https://github.com/nvim-telescope/telescope-dap.nvim"
   },
-  ["telescope-media-files.nvim"] = {
-    loaded = true,
-    path = "/Users/fg/.local/share/nvim/site/pack/packer/start/telescope-media-files.nvim",
-    url = "https://github.com/nvim-telescope/telescope-media-files.nvim"
-  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/Users/fg/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -298,6 +293,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/fg/.local/share/nvim/site/pack/packer/start/vim-surround",
     url = "https://github.com/tpope/vim-surround"
+  },
+  ["vscode.nvim"] = {
+    loaded = true,
+    path = "/Users/fg/.local/share/nvim/site/pack/packer/start/vscode.nvim",
+    url = "https://github.com/Mofiqul/vscode.nvim"
   }
 }
 

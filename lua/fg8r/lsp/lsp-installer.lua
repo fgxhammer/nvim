@@ -13,7 +13,7 @@ lsp_installer.on_server_ready(function(server)
 
   if server.name == "jsonls" then
     local jsonls_opts = require("fg8r.lsp.settings.jsonls")
-    opts = vim.tbl_deep_extend("force", jsonls_opts, opts)
+       opts = vim.tbl_deep_extend("force", jsonls_opts, opts)
   end
 
   if server.name == "sumneko_lua" then

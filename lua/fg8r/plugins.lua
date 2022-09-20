@@ -49,7 +49,6 @@ return packer.startup(function(use)
   use "kyazdani42/nvim-tree.lua"
   use "kyazdani42/nvim-web-devicons"
   use "nvim-telescope/telescope.nvim"
-  use "nvim-telescope/telescope-media-files.nvim"
   use "nvim-lualine/lualine.nvim"
   use { 'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons' }
 
@@ -98,7 +97,8 @@ return packer.startup(function(use)
   use "sainnhe/sonokai"
   use "joshdick/onedark.vim"
   use "EdenEast/nightfox.nvim"
-  use 'Mofiqul/dracula.nvim'
+  use "Mofiqul/dracula.nvim"
+  use "Mofiqul/vscode.nvim"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

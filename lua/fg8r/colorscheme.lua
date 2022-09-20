@@ -1,6 +1,8 @@
-local colorscheme = "gruvbox"
+local colorscheme = "catppuccin"
+-- local colorscheme = "gruvbox"
 
-vim.g.catppuccin_flavour = "macchiato" -- latte, frappe, macchiato, mocha
+vim.g.catppuccin_flavour = "mocha" -- latte, frappe, macchiato, mocha
+
 require("catppuccin").setup({
   transparent_background = true,
   term_colors = false,
@@ -15,7 +17,7 @@ require("catppuccin").setup({
   },
   styles = {
     comments = { "italic" },
-    conditionals = { "bold" },
+    conditionals = {},
     loops = {},
     functions = { "bold" },
     keywords = {},
@@ -28,10 +30,40 @@ require("catppuccin").setup({
     operators = {},
   },
   integrations = {
-    -- For various plugins integrations see https://github.com/catppuccin/nvim#integrations
+    ts_rainbow = true,
+    telescope = true,
+    gitsigns = true,
+    treesitter = true,
+    cmp = true,
+    nvimtree = true,
+    neogit = true
   },
   color_overrides = {},
   highlight_overrides = {},
+})
+
+local c = require('vscode.colors')
+require('vscode').setup({
+  -- Enable transparent background
+  transparent = true,
+
+  -- Enable italic comment
+  italic_comments = true,
+
+  -- Disable nvim-tree background color
+  disable_nvimtree_bg = true,
+
+  -- Override colors (see ./lua/vscode/colors.lua)
+  color_overrides = {
+    vscLineNumber = '#FFFFFF',
+  },
+
+  -- Override highlight groups (see ./lua/vscode/theme.lua)
+  group_overrides = {
+    -- this supports the same val table as vim.api.nvim_set_hl
+    -- use colors from this colorscheme by requiring vscode.colors!
+    Cursor = { fg = c.vscDarkBlue, bg = c.vscLightGreen, bold = true },
+  }
 })
 
 local dracula = require("dracula")

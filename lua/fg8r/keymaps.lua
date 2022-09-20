@@ -1,5 +1,4 @@
 local opts = { noremap = true, silent = true }
-
 local keymap = vim.api.nvim_set_keymap
 
 -- Follow the leader
@@ -16,15 +15,15 @@ vim.g.maplocalleader = " "
 --  command_mode = "c",
 
 keymap("n", "<leader>e", ":NvimTreeFindFileToggle<cr>", opts)
-keymap("n", "<leader><leader>q", ":q<cr>", opts)
-keymap("n", "<leader>s", ":w<cr>", opts)
-keymap("n", "<leader>q", ":bd<cr>", opts)
+keymap("n", "<leader>q", ":q<cr>", opts)
+keymap("n", "<leader>w", ":w<cr>", opts)
+keymap("n", "<leader><leader>q", ":bd<cr>", opts)
 
 -- Windows
-keymap("n", "<leader>wh", "<C-w>h", opts)
-keymap("n", "<leader>wj", "<C-w>j", opts)
-keymap("n", "<leader>wk", "<C-w>k", opts)
-keymap("n", "<leader>wl", "<C-w>l", opts)
+keymap("n", "<leader>h", "<C-w>h", opts)
+keymap("n", "<leader>j", "<C-w>j", opts)
+keymap("n", "<leader>k", "<C-w>k", opts)
+keymap("n", "<leader>l", "<C-w>l", opts)
 
 -- Resize
 keymap("n", "<C-j>", ":resize +2<cr>", opts)
@@ -56,18 +55,19 @@ keymap("v", "<S-Tab>", "<gv", opts)
 keymap("x", "<A-j>", ":m '>+1<cr>gv=gv", opts)
 keymap("x", "<A-k>", ":m '<-2<cr>gv=gv", opts)
 
+-- FIXME Rewrite to mach fgxhammer user
 -- Quick source with uncaching modules
--- function _G.ReloadConfig()
---   for name,_ in pairs(package.loaded) do
---     if name:match('^fg8r') then
---       package.loaded[name] = nil
---     end
---   end
---   -- Set $MYVIMRC
---   dofile(vim.env.MYVIMRC)
--- end
---
--- keymap('n', '<Leader><leader>s', '<cmd>lua ReloadConfig()<cr>', opts)
+function _G.ReloadConfig()
+  for name, _ in pairs(package.loaded) do
+    if name:match('^fg8r') then
+      package.loaded[name] = nil
+    end
+  end
+  -- Set $MYVIMRC
+  dofile(vim.env.MYVIMRC)
+end
+
+keymap('n', '<Leader><leader>.', '<cmd>lua ReloadConfig()<cr>', opts)
 -- vim.cmd('command! ReloadConfig lua ReloadConfig()')
 
 -- Telescope
