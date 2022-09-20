@@ -14,7 +14,7 @@ vim.g.maplocalleader = " "
 --  term_mode = "t",
 --  command_mode = "c",
 
-keymap("n", "<leader>e", ":NvimTreeFindFileToggle<cr>", opts)
+keymap("n", "<leader>E", ":NvimTreeFindFileToggle<cr>", opts)
 keymap("n", "<leader>q", ":q<cr>", opts)
 keymap("n", "<leader>w", ":w<cr>", opts)
 keymap("n", "<leader><leader>q", ":bd<cr>", opts)
@@ -34,7 +34,6 @@ keymap("n", "<C-h>", ":vertical resize +2<cr>", opts)
 -- Buffer nav
 keymap("n", "<S-l>", ":bnext<cr>", opts)
 keymap("n", "<S-h>", ":bprevious<cr>", opts)
-keymap("n", "<leader>jj", "<C-^>", opts)
 
 -- Crazy Esc
 keymap("i", "jk", "<esc>", opts)
@@ -71,6 +70,7 @@ keymap("n", "<Leader><leader>,", "<cmd>lua ReloadConfig()<cr>", opts)
 -- vim.cmd('command! ReloadConfig lua ReloadConfig()')
 
 -- Telescope
+keymap("n", "<leader>e", "<cmd>lua require('telescope.builtin').oldfiles()<cr>", opts)
 keymap("n", "<leader>ff", "<cmd>lua require('telescope.builtin').find_files()<cr>", opts)
 keymap("n", "<leader>fg", "<cmd>lua require('telescope.builtin').live_grep()<cr>", opts)
 keymap("n", "<leader>b", "<cmd>lua require('telescope.builtin').buffers()<cr>", opts)
