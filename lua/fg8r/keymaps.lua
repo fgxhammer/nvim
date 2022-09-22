@@ -19,11 +19,17 @@ keymap("n", "<leader>q", ":q<cr>", opts)
 keymap("n", "<leader>w", ":w<cr>", opts)
 keymap("n", "<leader><leader>q", ":bd<cr>", opts)
 
--- Window navigation
+-- Navigation
 keymap("n", "<leader>hh", "<C-w>h", opts)
 keymap("n", "<leader>jj", "<C-w>j", opts)
 keymap("n", "<leader>kk", "<C-w>k", opts)
 keymap("n", "<leader>ll", "<C-w>l", opts)
+
+
+keymap("n", "<leader>to", "<cmd>tabedit %<cr>", opts)
+keymap("n", "<leader>tc", "<cmd>tabclose<cr>", opts)
+keymap("n", "<leader>tn", "<cmd>tabnext<cr>", opts)
+keymap("n", "<leader>tp", "<cmd>tabprevious<cr>", opts)
 
 -- Resize
 keymap("n", "<C-j>", ":resize +2<cr>", opts)
@@ -68,6 +74,16 @@ end
 
 keymap("n", "<Leader><leader>,", "<cmd>lua ReloadConfig()<cr>", opts)
 -- vim.cmd('command! ReloadConfig lua ReloadConfig()')
+
+-- #### Plugin sepcific ####
+
+-- Neogit
+keymap("n", "<leader>gg", "<cmd>lua require('neogit').open()<cr>", opts)
+
+-- Diffview
+keymap("n", "<leader>do", "<cmd>DiffviewOpen<cr>", opts)
+keymap("n", "<leader>dc", "<cmd>DiffviewClose<cr>", opts)
+keymap("n", "<leader>df", "<cmd>DiffviewFileHistory %<cr>", opts)
 
 -- Telescope
 keymap("n", "<leader>e", "<cmd>lua require('telescope.builtin').oldfiles()<cr>", opts)
