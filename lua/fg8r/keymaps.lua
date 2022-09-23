@@ -25,11 +25,18 @@ keymap("n", "<leader>jj", "<C-w>j", opts)
 keymap("n", "<leader>kk", "<C-w>k", opts)
 keymap("n", "<leader>ll", "<C-w>l", opts)
 
-
+-- Tabs
 keymap("n", "<leader>to", "<cmd>tabedit %<cr>", opts)
 keymap("n", "<leader>tc", "<cmd>tabclose<cr>", opts)
 keymap("n", "<leader>tn", "<cmd>tabnext<cr>", opts)
 keymap("n", "<leader>tp", "<cmd>tabprevious<cr>", opts)
+
+-- Qf list
+keymap("n", "<leader>co", "<cmd>copen<cr>", opts)
+keymap("n", "<leader>cc", "<cmd>cclose<cr>", opts)
+keymap("n", "<leader>cn", "<cmd>cnext<cr>", opts)
+keymap("n", "<leader>cp", "<cmd>cprev<cr>", opts)
+keymap("n", "<leader>ch", "<cmd>chistory<cr>", opts)
 
 -- Resize
 keymap("n", "<C-j>", ":resize +2<cr>", opts)
