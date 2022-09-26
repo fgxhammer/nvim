@@ -32,7 +32,7 @@ local options = {
 	wrap = true, -- display lines as one long line
 	scrolloff = 10, -- is one of my fav
 	sidescrolloff = 8,
-	-- guifont = "monospace:h17", -- the font used in graphical neovim applications
+	laststatus = 3, -- set global status line
 }
 
 for k, v in pairs(options) do
@@ -40,5 +40,6 @@ for k, v in pairs(options) do
 end
 
 -- Set list -> Show chars for whitespace chars
--- vim.cmd([[set list]])
+vim.cmd([[set list]])
 -- vim.cmd([[set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<,space:.]])
+vim.cmd([[set listchars=tab:>-,trail:~,extends:>,precedes:<,space:.]])
