@@ -71,7 +71,7 @@ keymap("x", "<A-k>", ":m '<-2<cr>gv=gv", opts)
 -- Quick source with uncaching modules
 function _G.ReloadConfig()
 	for name, _ in pairs(package.loaded) do
-		if name:match("^fg8r") then
+		if name:match("^fgxhammer") then
 			package.loaded[name] = nil
 		end
 	end
@@ -113,4 +113,4 @@ keymap("n", "<leader>dl", "<cmd>lua require'dap'.run_last()<cr>", opts)
 keymap("n", "<leader>du", "<cmd>lua require'dapui'.toggle()<cr>", opts)
 keymap("n", "<F4>", "<cmd>lua require'dapui'.toggle()<cr>", opts)
 keymap("n", "<leader>dt", "<cmd>lua require'dap'.terminate()<cr>", opts)
-keymap("n", "<leader>da", "<cmd>lua require'fg8r.dap.helper'.attach()<cr>", opts)
+keymap("n", "<leader>da", "<cmd>lua require'fgxhammer.dap.helper'.attach()<cr>", opts)

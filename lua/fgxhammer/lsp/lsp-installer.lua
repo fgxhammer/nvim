@@ -7,22 +7,22 @@ end
 -- Alternatively, you may also register handlers on specific server instances instead (see example below).
 lsp_installer.on_server_ready(function(server)
   local opts = {
-    on_attach = require("fg8r.lsp.handlers").on_attach,
-    capabilities = require("fg8r.lsp.handlers").capabilities,
+    on_attach = require("fgxhammer.lsp.handlers").on_attach,
+    capabilities = require("fgxhammer.lsp.handlers").capabilities,
   }
 
   if server.name == "jsonls" then
-    local jsonls_opts = require("fg8r.lsp.settings.jsonls")
+    local jsonls_opts = require("fgxhammer.lsp.settings.jsonls")
        opts = vim.tbl_deep_extend("force", jsonls_opts, opts)
   end
 
   if server.name == "sumneko_lua" then
-    local sumneko_opts = require("fg8r.lsp.settings.sumneko_lua")
+    local sumneko_opts = require("fgxhammer.lsp.settings.sumneko_lua")
     opts = vim.tbl_deep_extend("force", sumneko_opts, opts)
   end
 
   if server.name == "pyright" then
-    local pyright_opts = require("fg8r.lsp.settings.pyright")
+    local pyright_opts = require("fgxhammer.lsp.settings.pyright")
     opts = vim.tbl_deep_extend("force", pyright_opts, opts)
   end
 

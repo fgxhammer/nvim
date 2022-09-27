@@ -1,4 +1,4 @@
-# fg8r neovim setup
+# fgxhammer neovim setup
 
 - Neovim node support
 
