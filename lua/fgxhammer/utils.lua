@@ -2,7 +2,6 @@
 
 local M = {}
 
-M.fgpcall = function (call, module)
-  pcall(call, module)
+M.errpcall = function(call, module)
+	pcall(call, module)
 end
-

@@ -12,7 +12,7 @@ bufferline.setup({
 		},
 		left_trunc_marker = "",
 		modified_icon = "●",
-		offsets = { { filetype = "NvimTree", text = "📚", text_align = "center" } },
+		offsets = { { filetype = "NvimTree", text = "", text_align = "center" } },
 		right_trunc_marker = "",
 		show_close_icon = false,
 		show_tab_indicators = true,
