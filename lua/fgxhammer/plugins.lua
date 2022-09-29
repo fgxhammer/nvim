@@ -40,17 +40,23 @@ packer.init({
 
 -- Plugins go here
 return packer.startup(function(use)
+  -- UI
 	use("wbthomason/packer.nvim") -- Have packer manage itself
 	use("nvim-lua/popup.nvim") -- An implementation of the Popup API from vim in Neovkyazdani42/nvim-tree.luaim
 	use("nvim-lua/plenary.nvim") -- Useful lua functions used ny lots of plugins
-	use("windwp/nvim-autopairs")
-	use("numToStr/Comment.nvim")
-	use("tpope/vim-surround")
+	use("nvim-treesitter/nvim-treesitter")
 	use("kyazdani42/nvim-tree.lua")
 	use("kyazdani42/nvim-web-devicons")
 	use("nvim-telescope/telescope.nvim")
 	use("nvim-lualine/lualine.nvim")
 	use({ "akinsho/bufferline.nvim", tag = "v2.*", requires = "kyazdani42/nvim-web-devicons" })
+	use("p00f/nvim-ts-rainbow")
+
+  -- Editing
+	use("windwp/nvim-autopairs")
+	use("numToStr/Comment.nvim")
+	use("tpope/vim-surround")
+  use("windwp/nvim-ts-autotag")
 
 	-- Debugger
 	use("mfussenegger/nvim-dap")
@@ -58,7 +64,7 @@ return packer.startup(function(use)
 	use("rcarriga/nvim-dap-ui")
 	use("nvim-telescope/telescope-dap.nvim")
 
-	-- cmp plugins
+	-- Cmp plugins
 	use("hrsh7th/nvim-cmp") -- the completion plugin
 	use("hrsh7th/cmp-buffer") -- buffer competions
 	use("hrsh7th/cmp-path") -- path completions
@@ -67,25 +73,20 @@ return packer.startup(function(use)
 	use("hrsh7th/cmp-nvim-lsp") -- lsp cmp
 	use("hrsh7th/cmp-nvim-lua") -- lsp lua
 
-	-- snippets
+	-- Snippets
 	use("L3MON4D3/LuaSnip") -- snippet engine
 	use("rafamadriz/friendly-snippets") -- snippet pack
 
 	-- LSP
 	use("neovim/nvim-lspconfig") -- neovim LSP
 	use("williamboman/nvim-lsp-installer") -- LSP installer
-	use("jose-elias-alvarez/null-ls.nvim")
-
-	-- Treesitter
-	use("nvim-treesitter/nvim-treesitter")
-	use("p00f/nvim-ts-rainbow")
+	use("jose-elias-alvarez/null-ls.nvim") -- For lint on save
 
 	-- Git
 	use("lewis6991/gitsigns.nvim")
-	use({ "TimUntersberger/neogit", requires = "nvim-lua/plenary.nvim" })
-  use("sindrets/diffview.nvim")
+	use("sindrets/diffview.nvim")
 
-	-- colorschemes
+	-- Colorschemes
 	use("morhetz/gruvbox")
 	use("NLKNguyen/papercolor-theme")
 	use("sainnhe/gruvbox-material")
@@ -101,6 +102,7 @@ return packer.startup(function(use)
 	use("EdenEast/nightfox.nvim")
 	use("Mofiqul/dracula.nvim")
 	use("Mofiqul/vscode.nvim")
+  use("folke/tokyonight.nvim")
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

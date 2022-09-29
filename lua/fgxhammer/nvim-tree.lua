@@ -27,41 +27,13 @@ nvim_tree.setup({
 	update_cwd = true,
 	diagnostics = {
 		enable = true,
-		icons = {
-			hint = "!",
-			info = "i",
-			warning = "!",
-			error = "x",
-		},
 	},
 	renderer = {
-		highlight_opened_files = "1",
+		highlight_opened_files = "all",
 		indent_markers = {
 			-- enable = true,
 			-- inline_arrows = false,
 		},
-		--   icons = {
-		--     glyphs = {
-		--       default = "",
-		--       symlink = "",
-		--       git = {
-		--         unstaged = "",
-		--         staged = "S",
-		--         unmerged = "",
-		--         renamed = "➜",
-		--         deleted = "",
-		--         untracked = "U",
-		--         ignored = "◌",
-		--       },
-		--       folder = {
-		--         default = "",
-		--         open = "",
-		--         empty = "",
-		--         empty_open = "",
-		--         symlink = "",
-		--       }
-		--     }
-		--   }
 	},
 	update_focused_file = {
 		enable = true,
@@ -74,10 +46,7 @@ nvim_tree.setup({
 		timeout = 500,
 	},
 	view = {
-		width = 40,
-		height = 30,
-		hide_root_folder = false,
-		side = "left",
+    width = 45,
 		mappings = {
 			custom_only = false,
 			list = {
@@ -86,7 +55,5 @@ nvim_tree.setup({
 				{ key = "v", cb = tree_cb("vsplit") },
 			},
 		},
-		number = false,
-		relativenumber = false,
 	},
 })
