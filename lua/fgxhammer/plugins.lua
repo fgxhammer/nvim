@@ -1,3 +1,4 @@
+-- TODO pin versions
 local fn = vim.fn
 
 -- Automatically install packer
@@ -88,19 +89,7 @@ return packer.startup(function(use)
 
 	-- Colorschemes
 	use("morhetz/gruvbox")
-	use("NLKNguyen/papercolor-theme")
-	use("sainnhe/gruvbox-material")
 	use({ "catppuccin/nvim", as = "catppuccin" })
-	use("drewtempelmeyer/palenight.vim")
-	use("ayu-theme/ayu-vim")
-	use("rakr/vim-one")
-	use("Everblush/everblush.vim")
-	use("sainnhe/everforest")
-	use("bluz71/vim-nightfly-guicolors")
-	use("sainnhe/sonokai")
-	use("joshdick/onedark.vim")
-	use("EdenEast/nightfox.nvim")
-	use("Mofiqul/dracula.nvim")
 	use("Mofiqul/vscode.nvim")
 	use("folke/tokyonight.nvim")
 

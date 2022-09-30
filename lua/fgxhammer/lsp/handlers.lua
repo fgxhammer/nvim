@@ -1,7 +1,6 @@
 local M = {}
 
 M.setup = function()
-	-- TODO find better icons
 	local signs = {
 		{ name = "DiagnosticSignError", text = "x" },
 		{ name = "DiagnosticSignWarn", text = "!" },
@@ -14,7 +13,6 @@ M.setup = function()
 	end
 
 	local config = {
-		-- disable virtual text
 		virtual_text = true,
 		-- show signs
 		-- signs = {
@@ -22,7 +20,7 @@ M.setup = function()
 		-- },
 		signs = false,
 		update_in_insert = true,
-		underline = true,
+		underline = false,
 		severity_sort = true,
 		float = {
 			focusable = false,

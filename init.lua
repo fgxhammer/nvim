@@ -1,5 +1,3 @@
--- TODO print warnings if pcall fails
-
 require("fgxhammer.options")
 require("fgxhammer.keymaps")
 require("fgxhammer.plugins")
