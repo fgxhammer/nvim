@@ -46,7 +46,7 @@ nvim_tree.setup({
 		timeout = 500,
 	},
 	view = {
-    width = 45,
+		width = 45,
 		mappings = {
 			custom_only = false,
 			list = {

@@ -40,7 +40,7 @@ packer.init({
 
 -- Plugins go here
 return packer.startup(function(use)
-  -- UI
+	-- UI
 	use("wbthomason/packer.nvim") -- Have packer manage itself
 	use("nvim-lua/popup.nvim") -- An implementation of the Popup API from vim in Neovkyazdani42/nvim-tree.luaim
 	use("nvim-lua/plenary.nvim") -- Useful lua functions used ny lots of plugins
@@ -52,11 +52,11 @@ return packer.startup(function(use)
 	use({ "akinsho/bufferline.nvim", tag = "v2.*", requires = "kyazdani42/nvim-web-devicons" })
 	use("p00f/nvim-ts-rainbow")
 
-  -- Editing
+	-- Editing
 	use("windwp/nvim-autopairs")
 	use("numToStr/Comment.nvim")
 	use("tpope/vim-surround")
-  use("windwp/nvim-ts-autotag")
+	use("windwp/nvim-ts-autotag")
 
 	-- Debugger
 	use("mfussenegger/nvim-dap")
@@ -102,7 +102,7 @@ return packer.startup(function(use)
 	use("EdenEast/nightfox.nvim")
 	use("Mofiqul/dracula.nvim")
 	use("Mofiqul/vscode.nvim")
-  use("folke/tokyonight.nvim")
+	use("folke/tokyonight.nvim")
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
