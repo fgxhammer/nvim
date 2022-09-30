@@ -67,7 +67,6 @@ keymap("v", "<S-Tab>", "<gv", opts)
 keymap("x", "<A-j>", ":m '>+1<cr>gv=gv", opts)
 keymap("x", "<A-k>", ":m '<-2<cr>gv=gv", opts)
 
--- FIXME Rewrite to mach fgxhammer user
 -- Quick source with uncaching modules
 function _G.ReloadConfig()
 	for name, _ in pairs(package.loaded) do
@@ -78,14 +77,10 @@ function _G.ReloadConfig()
 	-- Set $MYVIMRC
 	dofile(vim.env.MYVIMRC)
 end
-
 keymap("n", "<Leader><leader>,", "<cmd>lua ReloadConfig()<cr>", opts)
 -- vim.cmd('command! ReloadConfig lua ReloadConfig()')
 
 -- #### Plugin sepcific ####
-
--- Neogit
-keymap("n", "<leader>gg", "<cmd>lua require('neogit').open()<cr>", opts)
 
 -- Diffview
 keymap("n", "<leader>do", "<cmd>DiffviewOpen<cr>", opts)
